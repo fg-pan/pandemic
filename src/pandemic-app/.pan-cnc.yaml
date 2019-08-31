@@ -1,0 +1,34 @@
+## Example pan-cnc.yaml
+
+name: pandemic_app
+
+views:
+  - name: ''
+    class: CNCView
+    menu: Pandemic App
+    menu_option: LETS GO
+    attributes:
+      template_name: pan_cnc/welcome.html
+    context:
+      title: Pandemic App
+      description: Pandemic (noun) - Palo Alto Networks ngfws, spread rapidly over a large scale deployment
+      documentation_link: http://pandemic.readthedocs.io
+
+  - name: 'manage'
+    class: ManageSnippetView
+    menu: Pandemic App
+    menu_option: Manage Serial Numbers
+    attributes:
+      snippet: conf
+      header: Step 1
+      title: Manage Serial Numbers
+
+  - name: 'provision'
+    class: ProvisionSnippetView     
+    menu: Pandemic App
+    menu_option: TTU Devices by Serial Number
+    attributes:
+      snippet: ttu
+      header: Step 2
+      title: TTU Devices By Serial Number
+
